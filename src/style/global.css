@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800;900&family=Ubuntu:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@200;300;400;600;700;800;900&family=Ubuntu:wght@300;400;500&display=swap');
 html,body{
     margin:0;
     padding:0;
     
     background-color: #07070D;
 }
+
 body{
     color: #fff;
     /*background-image: url('/public/flag.png');*/
@@ -34,9 +36,10 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     padding-left: 12px;
     padding-right: 12px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .lander p{
     font-weight: 300;
@@ -154,7 +157,6 @@ h2{
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
-    text-align: left;
     width: 100%;
     margin-bottom: 10px;
     margin-top: 30px;
@@ -164,6 +166,7 @@ h2{
     font-size: 22px;
     font-weight: 600;
     padding: 20px 40px;
+    margin-top: 100px;
 
 }
 .form-tab .button{
