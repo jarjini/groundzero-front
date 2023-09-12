@@ -5,6 +5,7 @@ import SidebarLeft from './SidebarLeft';
 import AssociationPopUp from './Association';
 import AddVillage from './AddVillage';
 import { Villages } from './Village';
+import { AssociationsTest } from './AssociationsTest';
 
 const Lander = () => {
     /*return (
@@ -18,6 +19,7 @@ const Lander = () => {
         <SidebarLeft />
         <div className='lander'>
             <Villages />
+            <AssociationsTest />
         </div>
     </>
     )
