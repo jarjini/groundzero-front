@@ -7,7 +7,7 @@ html,body{
 }
 body{
     color: #fff;
-    background-image: url('/public/flag.png');
+    /*background-image: url('/public/flag.png');*/
     background-repeat: no-repeat;
     background-position: 20px 20px;
     background-size: 80px;
@@ -21,6 +21,12 @@ h1{
     margin-bottom: 40px;
     margin-top: 0;
 }
+.logo{
+    background: linear-gradient(90deg, #FF0000 20%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+}
 .lander{
     margin: 0 auto;
     max-width: 960px;
@@ -29,8 +35,142 @@ h1{
     align-items: center;
     justify-content: center;
     height: 100vh;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 .lander p{
     font-weight: 300;
     max-width: 600px;
+}
+.mapdiv{
+    height: 100vh;
+}
+.sidebarleft{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    width: fit-content;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.popup{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 700px;
+    background-color: #181818;
+}
+.popup .cover{
+    background-image: url('/public/cover.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    position: relative;
+
+}
+
+.add-village input{
+    width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #FFF;
+    font-size: 16px;
+    font-weight: 300;
+    border:0;
+    border-radius: 5px;
+}
+.add-village .form-tab-title{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.add-village textarea{
+    width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #FFF;
+    font-size: 16px;
+    font-weight: 300;
+    border:0;
+    border-radius: 5px;
+    height: 100px;
+}
+.add-village button, .button{
+    padding: 10px 20px;
+    background-color: #C1272D;
+    color: #FFF;
+    border:0;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.add-village button:hover{
+    background-color: #A11D22;
+}
+
+
+.notif_bar{
+	position: fixed;
+	width: 100vw;
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: #82C263;
+	color: #FFF;
+	z-index: 99;
+    display:none;
+}
+.notif_bar.redalert{
+	background-color: #E04A3A;
+}
+.village{
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #FFF;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    color: #000;
+}
+.villages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+h2{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.button.big{
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px 40px;
+
+}
+.form-tab .button{
+    width: fit-content;
+    margin-bottom: 10px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
 }
