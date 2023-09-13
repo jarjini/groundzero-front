@@ -1,26 +1,40 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import '../style/global.css';
 import MapComponent from './Map';
 import SidebarLeft from './SidebarLeft';
 import AssociationPopUp from './Association';
 import AddVillage from './AddVillage';
 import { Villages } from './Village';
+import { MissingPersons } from './MissingPerson';
 
 const Lander = () => {
-    /*return (
-        <div className="lander">
-            <h1>GroundZero.ma</h1>
-            <p>We're dedicated to directly supporting local associations and volunteers, ensuring they have the funds to act promptly on the ground. Donations are transparently directed to verified groups. Soon, our interactive map will provide real-time visuals of operations as they unfold.</p>
-        </div>
-    );*/
+    const [activeTab, setActiveTab] = useState('villages');  // Default to 'villages' tab
 
-    return(<>
-        <SidebarLeft />
-        <div className='lander'>
-            <Villages />
-        </div>
-    </>
-    )
+    return (
+        <>
+            <SidebarLeft />
+            <div className='lander'>
+                <a href='/add-missing'><div className='button big mt'>Lancer un avis de recherche</div></a>
+                <a href='/add-village'><div className='button big'>Déclarer un village à secourir</div></a>
+                <div className='tabs'>    
+                    <div 
+                        className={`tab ${activeTab === 'villages' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('villages')}
+                    >
+                        Villages à secourir
+                    </div>
+                    <div 
+                        className={`tab ${activeTab === 'missingPersons' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('missingPersons')}
+                    >
+                        Personnes disparues
+                    </div>
+                </div>
+                {activeTab === 'villages' && <Villages />}
+                {activeTab === 'missingPersons' && <MissingPersons />}
+            </div>
+        </>
+    );
 }
 
 export default Lander;

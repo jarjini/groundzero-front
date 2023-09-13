@@ -53,8 +53,7 @@ const Villages = () => {
         }, [])
     
         return(<>
-                <a href='/add-village'><div className='button big'>Déclarer un village à secourir</div></a>
-                <h2>Villages et zones qui ont besoin d'aide :</h2>
+                
                 <div className="villages">
                     {villages.map(village => (
                         <Village name={village.name} location={village.geolocation} phone={village.phone} whatsapp={village.whatsapp} needs={village.needs} createdAt={village.createdAt} />
