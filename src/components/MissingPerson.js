@@ -24,7 +24,7 @@ const MissingPerson = ({ name, villageName, location, age, sex, phone, whatsapp=
                 Village : <span>{villageName}</span>
             </div>
             <div className='person-location'>
-                Localisation : <a className='btn btn-success' href='${location}' target='_blank'>Voir</a>
+                Localisation : <a className='btn btn-success' href={location} target='_blank'>Voir</a>
             </div>
             <div className='person-age'>
                 Age : <span>{age}</span>
@@ -33,10 +33,10 @@ const MissingPerson = ({ name, villageName, location, age, sex, phone, whatsapp=
                 Sexe : <span>{sex}</span>
             </div>
             <div className='person-phone'>
-                Téléphone : <a href="tel:${phone}">{phone}</a>
+                Téléphone : <a href={`tel:${phone}`}>{phone}</a>
             </div>
             <div className='person-whatsapp'>
-                Whatsapp : <a href="https://wa.me/${whatsapp}?text=Send20%a20%quote">{whatsapp}</a>
+                Whatsapp : <a href={`https://wa.me/${whatsapp}?text=Salam`}>{whatsapp}</a>
             </div>
             <div className='person-info'>
                 Infos : <span>{info}</span>

@@ -95,6 +95,9 @@ h1{
     font-weight: 600;
     margin-bottom: 10px;
 }
+.person-phone a,.person-whatsapp a{
+    color:black !important;
+}
 .add-village textarea, .add-missing-person textarea{
     width: 100%;
     padding: 10px;
