@@ -16,7 +16,7 @@ const MissingPerson = ({ name, villageName, location, age, sex, phone, whatsapp=
     };
 
     return(
-        <div className="missing-person">
+        <div className="missing-person col-md-6">
             <div className='person-name'>
                 Nom : <span>{name}</span>
             </div>
@@ -24,7 +24,7 @@ const MissingPerson = ({ name, villageName, location, age, sex, phone, whatsapp=
                 Village : <span>{villageName}</span>
             </div>
             <div className='person-location'>
-                Localisation : <span>{location}</span>
+                Localisation : <a className='btn btn-success' href='${location}' target='_blank'>Voir</a>
             </div>
             <div className='person-age'>
                 Age : <span>{age}</span>
@@ -33,10 +33,10 @@ const MissingPerson = ({ name, villageName, location, age, sex, phone, whatsapp=
                 Sexe : <span>{sex}</span>
             </div>
             <div className='person-phone'>
-                Téléphone : <span>{phone}</span>
+                Téléphone : <a href="tel:${phone}">{phone}</a>
             </div>
             <div className='person-whatsapp'>
-                Whatsapp : <span>{whatsapp}</span>
+                Whatsapp : <a href="https://wa.me/${whatsapp}?text=Send20%a20%quote">{whatsapp}</a>
             </div>
             <div className='person-info'>
                 Infos : <span>{info}</span>
@@ -62,7 +62,7 @@ const MissingPersons = () => {
     
         return (
             <>
-                <div className="missing-persons">
+                <div className="missing-persons row">
                     {missingPersons.map(person => (
                         <MissingPerson 
                             name={person.name} 

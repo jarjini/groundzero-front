@@ -16,21 +16,21 @@ const Village = ({ name, location, phone, whatsapp="", needs="", createdAt }) =>
     };
 
     return(
-        <div className="village">
+        <div className="village col-md-6">
             <div className='village-name'>
                 Village : <span>{name}</span>
             </div>
-            <div className='village-location'>
-                Localisation : <span>{location}</span>
+            <div className='person-location'>
+                Localisation : <a className='btn btn-success' href='${location}' target='_blank'>Voir</a>
             </div>
             <div className='village-needs'>
                 Besoins et infos : <span>{needs}</span>
             </div>
-            <div className='village-phone'>
-                Téléphone : <span>{phone}</span>
+            <div className='person-phone'>
+                Téléphone : <a href="tel:${phone}">{phone}</a>
             </div>
-            <div className='village-whatsapp'>
-                Whatsapp : <span>{whatsapp}</span>
+            <div className='person-whatsapp'>
+                Whatsapp : <a href="https://wa.me/${whatsapp}?text=Send20%a20%quote">{whatsapp}</a>
             </div>
             <div className='village-createdat'>
                 Annoncé le : <span>{formatDateToFrench(createdAt)}</span>

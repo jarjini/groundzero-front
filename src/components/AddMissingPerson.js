@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import '../style/global.css';
 import api from '../services/api';
-
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 const AddMissingPerson = () => {
 
     const [name, setName] = useState('');
@@ -45,34 +47,46 @@ const AddMissingPerson = () => {
 
     return (
         <>
-            <form className="add-missing-person">
-                <div className='form-tab'>
-                    <a href='/'><div className='button'>Retour</div></a>
-                </div>
+        <Container>
+            <form className="add-missing-person mt-40">
+            <Row>
+                <Col md={6}>
                 <div className='form-tab'>
                     <div className='form-tab-title'>Nom de la personne (obligatoire) :</div>
                     <div className='form-tab-content'>
                         <input type='text' className='form-tab-input' value={name} onChange={e => setName(e.target.value)} placeholder='Nom de la personne' />
                     </div>
                 </div>
+                </Col>
+
+                <Col md={6}>
                 <div className='form-tab'>
                     <div className='form-tab-title'>Nom du village :</div>
                     <div className='form-tab-content'>
                         <input type='text' className='form-tab-input' value={villageName} onChange={e => setVillageName(e.target.value)} placeholder='Nom du village' />
                     </div>
                 </div>
+                </Col>
+
+                <Col md={12}>
                 <div className='form-tab'>
                     <div className='form-tab-title'>Localisation :</div>
                     <div className='form-tab-content'>
                         <input type='text' className='form-tab-input' placeholder='Lien Google Maps ' value={location} onChange={e => setLocation(e.target.value)} />
                     </div>
                 </div>
+                </Col>
+
+                <Col md={6}>
                 <div className='form-tab'>
                     <div className='form-tab-title'>Age :</div>
                     <div className='form-tab-content'>
                         <input type='text' className='form-tab-input' placeholder='Age' value={age} onChange={e => setAge(e.target.value)} />
                     </div>
                 </div>
+                </Col>
+                <Col md={6}>
+
                 <div className='form-tab'>
                     <div className='form-tab-title'>Sexe :</div>
                     <div className='form-tab-content'>
@@ -82,23 +96,46 @@ const AddMissingPerson = () => {
                         </select>
                     </div>
                 </div>
+                </Col>
+                <Col md={6}>
                 <div className='form-tab'>
                     <div className='form-tab-title'>Téléphone (obligatoire) :</div>
                     <div className='form-tab-content'>
                         <input type='text' className='form-tab-input' placeholder='Téléphone' value={phone} onChange={e => setPhone(e.target.value)} />
                     </div>
                 </div>
+                </Col>
+                <Col md={6}>
                 <div className='form-tab'>
                     <div className='form-tab-title'>Whatsapp :</div>
                     <div className='form-tab-content'>
                         <input type='text' className='form-tab-input' placeholder='Whatsapp' value={whatsapp} onChange={e => setWhatsapp(e.target.value)} />
                     </div>
                 </div>
-
+                </Col>
+                <Col md={6}>
                 <div className='form-tab'>
-                    <button type='submit' className='form-tab-submit' onClick={handleSubmit}>Soumettre</button>
+                    <a href='/'><div className='btn btn-success retour'> {'< Retour'}</div></a>
                 </div>
+                </Col>
+                <Col md={6}>
+                <div className='form-tab'>
+                    <button type='submit' className='btn btn-default form-tab-submit' onClick={handleSubmit}>Soumettre</button>
+                </div>
+                </Col>
+
+            </Row>
+              
+                
+               
+              
+              
+             
+
+               
+                
             </form>
+            </Container>
         </>
     )
 }

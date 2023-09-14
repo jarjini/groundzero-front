@@ -6,6 +6,9 @@ import AssociationPopUp from './Association';
 import AddVillage from './AddVillage';
 import { Villages } from './Village';
 import { MissingPersons } from './MissingPerson';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const Lander = () => {
     const [activeTab, setActiveTab] = useState('villages');  // Default to 'villages' tab
@@ -14,8 +17,19 @@ const Lander = () => {
         <>
             <SidebarLeft />
             <div className='lander'>
-                <a href='/add-missing'><div className='button big mt'>Lancer un avis de recherche</div></a>
-                <a href='/add-village'><div className='button big'>Déclarer un village à secourir</div></a>
+                <Container>
+                    <Row>
+                        <Col md={6}>
+                        <a href='/add-missing'><div className='button big mt'>Lancer un avis de recherche</div></a>
+
+                        </Col>
+
+                        <Col md={6}>
+                        <a href='/add-village'><div className='button big mt'>Déclarer un village à secourir</div></a>
+                            </Col>
+                    </Row>
+                </Container>
+              
                 <div className='tabs'>    
                     <div 
                         className={`tab ${activeTab === 'villages' ? 'active' : ''}`}
